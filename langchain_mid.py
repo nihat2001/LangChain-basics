@@ -81,8 +81,8 @@ memory_chain = RunnableWithMessageHistory(
         ("human", "{input}")
     ])  | llm | parser, 
     get_history,
-    input_messae_key="input",
-    history_message_key="history"
+    input_messages_key="input",
+    history_messages_key="history"
 )
 
 config = {"configurable": {"session_id": "user1"}}
